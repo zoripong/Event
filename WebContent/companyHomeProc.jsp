@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:forward page="template.jsp">	
-		<jsp:param name="CONTENTPAGE" value="mainProc.jsp" />
-	</jsp:forward>	
+
 </body>
 </html>

@@ -1,8 +1,12 @@
+
 @font-face {
     font-family: titlefont;
     src: url('../font/Allura-Regular.otf');
 }
 
+header{
+	position : absolute;
+}
 #sc_signin{
 	display:block;
 	width : 100%;

@@ -10,3 +10,12 @@ index입니다.
 	
 %>
 
+<%
+
+	if("1".equals(session.getAttribute("isCompany"))){
+		%>
+			<a href="writeEvent.jsp">이벤트 등록하기</a>
+		<%
+	}
+
+%>

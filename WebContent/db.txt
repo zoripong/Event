@@ -18,3 +18,17 @@ CREATE TABLE user(
   isCompany INT(1) NOT NULL,
   PRIMARY KEY (id)
 )DEFAULT CHARSET=utf8;
+
+#event
+CREATE TABLE event(
+  event_id INT(10) NOT NULL auto_increment,
+  user_id INT(10) NOT NULL,
+  title VARCHAR(50) NOT NULL,
+  end_date DATE NOT NULL,
+  detail VARCHAR(50),
+  question VARCHAR(50),
+  reward VARCHAR(50),
+  main_img VARCHAR(50),
+  PRIMARY KEY (event_id),
+  FOREIGN KEY (user_id) REFERENCES user(id)
+)DEFAULT CHARSET=utf8;

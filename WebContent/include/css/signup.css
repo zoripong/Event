@@ -2,7 +2,9 @@
     font-family: titlefont;
     src: url('../font/Allura-Regular.otf');
 }
-
+header{
+	position : absolute;
+}
 #sc_signup{
 	display:block;
 	width : 100%;

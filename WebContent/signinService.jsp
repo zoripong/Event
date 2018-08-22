@@ -22,16 +22,16 @@
 	
 	if(rowCnt == 1){
 		System.out.println("로그인 성공");
-		session.setAttribute("id", id);
+		session.setAttribute("id", rs.getInt("id"));
+		session.setAttribute("user_id", id);
 		session.setAttribute("isCompany", rs.getString("isCompany"));
+
+		response.sendRedirect("index.jsp");
 		
-		%>
-		<jsp:forward page="main.jsp"/>
-		<%
 	}else{
-		System.out.println("로그인 실패");%>
-		<jsp:forward page="signin.jsp"/>
-		<%
+		System.out.println("로그인 실패");
+		response.sendRedirect("signin.jsp");
+		
 	}
 	
 	System.out.println("size : "+rowCnt);

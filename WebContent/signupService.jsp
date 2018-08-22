@@ -29,16 +29,15 @@
         if(!file.exists()){
             file.mkdirs();
             System.out.println("created directory successfully!");
-        }%>
+        }
 
  	
-	
-		<jsp:forward page="signin.jsp"/>
-		<%
+		
+		response.sendRedirect("signin.jsp");
+		
 	}else{
-		System.out.println("회원가입 실패"); %>
-		<jsp:forward page="signup.jsp"/>
-		<%
+		System.out.println("회원가입 실패"); 
+		response.sendRedirect("signup.jsp");
 	}
 	
 %>

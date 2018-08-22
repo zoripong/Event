@@ -2,5 +2,7 @@
     pageEncoding="EUC-KR"%>
 <%
 	session.removeAttribute("id");	
+
+	response.sendRedirect("index.jsp");
+
 %>
-<jsp:forward page="main.jsp"/>

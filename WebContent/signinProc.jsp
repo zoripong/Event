@@ -16,7 +16,8 @@
 			</section>
 			<section id="sc_link">
 				<a href="#">Forgot your password?</a>
-				<a href="signup.jsp">Create an account</a>
+				<a href="signup.jsp?isCompany=0">Create an account</a>
+				<a href="signup.jsp?isCompany=0">Assign the company</a>
 			</section>
 	</section>
 </section>

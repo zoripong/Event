@@ -22,7 +22,7 @@
 
 <%
 
-	String id = (String)session.getAttribute("id");
+	String id = (String)session.getAttribute("user_id");
 	if(id!=null){
 		out.println("<a href=\"signout.jsp\"> 로그아웃 </a>");
 	}else{
