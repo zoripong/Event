@@ -1,0 +1,19 @@
+# DB 생성
+create database EventProject;
+
+# 사용자 등록 및 권한 부여
+CREATE USER 'epj'@'localhost' IDENTIFIED BY 'Aepj2018@)!*';
+
+GRANT ALL PRIVILEGES ON EventProject.* TO 'epj'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON EventProject.* TO 'epj'@'%' IDENTIFIED BY 'Aepj2018@)!*' WITH GRANT OPTION;
+ 
+FLUSH PRIVILEGES;
+
+# user
+CREATE TABLE user(
+  id INT(10) NOT NULL auto_increment,
+  user_id VARCHAR(32) NOT NULL,
+  password VARCHAR(32) NOT NULL,
+  name VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+)DEFAULT CHARSET=utf8;
