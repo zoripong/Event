@@ -15,5 +15,6 @@ CREATE TABLE user(
   user_id VARCHAR(32) NOT NULL,
   password VARCHAR(32) NOT NULL,
   name VARCHAR(50) NOT NULL,
+  isCompany INT(1) NOT NULL,
   PRIMARY KEY (id)
 )DEFAULT CHARSET=utf8;

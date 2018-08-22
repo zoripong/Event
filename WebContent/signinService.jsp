@@ -23,6 +23,8 @@
 	if(rowCnt == 1){
 		System.out.println("로그인 성공");
 		session.setAttribute("id", id);
+		session.setAttribute("isCompany", rs.getString("isCompany"));
+		
 		%>
 		<jsp:forward page="main.jsp"/>
 		<%

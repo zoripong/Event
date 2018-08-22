@@ -12,14 +12,14 @@
 	String id = request.getParameter("id");
 	String password = request.getParameter("password");
 	String name = request.getParameter("name");
-	
+	String isCompany = request.getParameter("isCompany");
 
 	
 	out.println(id +"/"+password+"/"+name);
 	
 	DBExecutor db = new DBExecutor(DBConnector.getMySqlConnection());
 	
-	if(db.exec("INSERT INTO user VALUES (null, '"+id+"', '"+password+"', '"+name+"');")){
+	if(db.exec("INSERT INTO user VALUES (null, '"+id+"', '"+password+"', '"+name+"', "+isCompany+");")){
 		System.out.println("회원가입 성공");
 	
 	 	ServletContext scontext = getServletContext();

@@ -2,6 +2,7 @@
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<link rel="stylesheet" type="text/css" href="include/css/index.css">
 index¿‘¥œ¥Ÿ.
 <%
 	Connection conn = DBConnector.getMySqlConnection();
