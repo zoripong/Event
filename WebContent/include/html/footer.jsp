@@ -19,7 +19,8 @@
 	</a>
 </section>
 <p> 
-
+<a href="signup.jsp?isCompany=1"> 회사등록 </a>
+	<a href="signup.jsp?isCompany=0"> 회원가입 </a>
 <%
 
 	String id = (String)session.getAttribute("user_id");
@@ -31,7 +32,6 @@
 	
 	
 %>
-<a href="signup.jsp?isCompany=1"> 회사등록 </a>
-	<a href="signup.jsp?isCompany=0"> 회원가입 </a>
+
 </p>
 </footer>    

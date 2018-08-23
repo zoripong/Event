@@ -29,7 +29,7 @@
 	ResultSet answerSet = db.execToSet(answerSql);
 	
 	
-		
+	
 			
 
 	
@@ -47,8 +47,19 @@
 		}
 		index++;
 		sb.append("<section id='answer_"+answerSet.getInt("answer_id")+"'class='answer_item'>");
+		
+		DBExecutor subDb = new DBExecutor(DBConnector.getMySqlConnection());
+		String heartSql= "select count(*) as count from answer join heart on answer.answer_id = heart.answer_id where answer.answer_id = "+answerSet.getInt("answer_id")+";";
+		ResultSet heartRs = subDb.execToSet(heartSql);
+		
 		sb.append(answerSet.getString("answer"));
 		sb.append(answerSet.getString("name"));
+		
+		sb.append("<a href=\"check.jsp?answer_id="+answerSet.getInt("answer_id")+"\" target=\"_blink\">누가 추천했지?</a>");
+		
+		if(heartRs.next()){
+			sb.append(heartRs.getInt("count"));
+		}
 		if("0".equals((String)session.getAttribute("isCompany")) && session.getAttribute("id") != null){
 			sb.append("<button onclick='recommend("+answerSet.getInt("answer_id")+")' >추천해요.</button>");
 		}

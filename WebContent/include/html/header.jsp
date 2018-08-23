@@ -9,9 +9,15 @@
 			<a href="signin.jsp">로그인</a>
 		<%
 	}else{
-		%>
-			<a href="signout.jsp">로그아웃</a>		
-		<%
+		if(session.getAttribute("isCompany").equals("0")){
+			%>
+			<a href="userHome.jsp">마이페이지</a>
+			<%	
+		}else{
+			%>
+			<a href="companyHome.jsp">마이페이지</a>
+			<%
+		}
 	}
 
 %>
