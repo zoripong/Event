@@ -27,7 +27,8 @@ index¿‘¥œ¥Ÿ.
 		sb.append("/");
 		sb.append(rs.getString("reward"));
 		sb.append("/");
-		sb.append("<img class=\"main_img\" src=\"image/"+rs.getString("name")+"/"+rs.getString("main_img")+"\">");
+		sb.append("<img class=\"main_img\" src=\"image/"+rs.getString("user.user_id")+"/"+rs.getString("main_img")+"\">");
+		
 		sb.append("</a>");
 		sb.append("</section>");
 	}

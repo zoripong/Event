@@ -112,9 +112,18 @@ header{
 	margin-bottom:40px;
 	text-align:center;
 }
-#sc_link>a{
+#sc_link input, #sc_link p{
+	font-size: 12pt;
 	color : #1155cc;
 	display:block;
 	padding:10px 0;
-	text-align:center;
+	text-decoration: underline;
+	width:50%;
+	margin-left:24%;
+	border:none;
+	background-color: rgba(0, 0, 0, 0);
+}
+#sc_link input:hover, #sc_link p:hover{
+	cursor: pointer;
+	text-decoration: none;
 }

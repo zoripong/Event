@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="include/css/signup.css">
 <script src="include/script/signup.js"></script>
 <%
+	request.setCharacterEncoding("utf-8");
 	String isCompany = request.getParameter("isCompany");
 %>
 <section id="sc_signup">
@@ -16,7 +17,7 @@
 			</section>
 			<form id="form_signup" action="signupService.jsp" method="POST">
 				<input type="hidden" name="isCompany" value="<%= isCompany %>">
-				<input class="input_text" type="text" name="id"  placeholder="ID" required />
+				<input class="input_text" type="email" name="id"  placeholder="ID" required />
 				<input id="input_pw" class="input_text" type="password" name="password" placeholder="Password" required/> 
 				<input id="input_re_pw" class="input_text" type="password" name="retype-pw" placeholder="Please Retype the Password" required/>
 				

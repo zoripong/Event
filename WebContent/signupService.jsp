@@ -21,10 +21,9 @@
 	
 	if(db.exec("INSERT INTO user VALUES (null, '"+id+"', '"+password+"', '"+name+"', "+isCompany+");")){
 		System.out.println("회원가입 성공");
-	
-	 	ServletContext scontext = getServletContext();
- 		String realFolder = scontext.getRealPath("image/"+id);
-		 File file = new File(realFolder);
+ 		String realFolder = application.getRealPath("image");
+		System.out.println(realFolder);
+		File file = new File(realFolder+"\\"+id);
 		System.out.println(realFolder);
         if(!file.exists()){
             file.mkdirs();

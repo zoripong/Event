@@ -12,8 +12,10 @@
 	
 	DBExecutor db = new DBExecutor(DBConnector.getMySqlConnection());
 
-	if(db.exec("INSERT INTO heart VALUES (null, "+userId+", "+answerId+");")){
-		System.out.println("성공");
+	if(!answerId.equals("-1")){
+		if(db.exec("INSERT INTO heart VALUES (null, "+userId+", "+answerId+");")){
+			System.out.println("성공");
+		}
 	}
 	
 	char[] cQuestion = question.replace(" ", "").toCharArray();

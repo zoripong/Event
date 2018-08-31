@@ -35,24 +35,6 @@
 	String detail = multi.getParameter("detail");
 	String reward = multi.getParameter("reward");
 	String main_image = multi.getParameter("hidden_main_img");
- 	
- 	/*
- 	
- 	CREATE TABLE event(
-	  event_id INT(10) NOT NULL auto_increment,
-	  user_id INT(10) NOT NULL,
-	  title VARCHAR(50) NOT NULL,
-	  end_date DATE NOT NULL,
-	  detail VARCHAR(50),
-	  question VARCHAR(50),
-	  reward VARCHAR(50),
-	  main_img VARCHAR(50),
-	  PRIMARY KEY (event_id),
-	  FOREIGN KEY (user_id) REFERENCES user(id)
-	)DEFAULT CHARSET=utf8;
-
- 	*/
- 	
 	
 	if(db.exec("INSERT INTO event VALUES(null, "+user_id+", '"+title+"', '"+end_date+"', '"+detail+"', '"+question+"', '"+reward+"', '"+main_image+"');")){
 		response.sendRedirect("companyHome.jsp");

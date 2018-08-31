@@ -9,7 +9,7 @@
 	
 	DBExecutor db = new DBExecutor(DBConnector.getMySqlConnection());
 
-	String sql = "select name from heart join user on heart.user_id = user.id where answer_id = 1;";
+	String sql = "select name from heart join user on heart.user_id = user.id where answer_id = "+answerId+";";
 	ResultSet rs = db.execToSet(sql);
 	
 	while(rs.next()){
